@@ -20,6 +20,7 @@ Each folder in this repo will represent a **standalone Spring Boot mini-project*
 | Project Name         | Description                                                                 | Status     |
 |----------------------|-----------------------------------------------------------------------------|------------|
 | `spring-core-tax`    | Basic tax calculator using Spring Core with XML-based configuration         | ✅ Complete |
+| `Laptop Dealer    `  |Creating multiple combinations of laptops with processors using Spring beans | ✅ Complete |
 | `...coming soon...`  | More projects to be added as I progress                                     | 🚧 WIP      |
 
 ---
@@ -57,7 +58,7 @@ Here's the path I'm following as I build up my Spring Boot skills:
 |------------|---------------------------------------------|
 | Apr 2025   | Started learning Spring Core                |
 | Apr 2025   | Completed first XML-based Spring project    |
-| ...        | More coming soon                            |
+| May 2025   | Will begin Spring Boot projects             |
 
 ---
 
