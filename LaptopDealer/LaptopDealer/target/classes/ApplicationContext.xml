@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Bean definitions -->
+
+    <bean id="i3" class="com.example.LaptopDealer.i3" />
+    <bean id="i5" class="com.example.LaptopDealer.i5" />
+    <bean id="i7" class="com.example.LaptopDealer.i7" />
+
+    <bean id="delwithi3" class="com.example.LaptopDealer.Del">
+        <constructor-arg ref="i3" />
+    </bean>
+
+    <bean id="delwithi5" class="com.example.LaptopDealer.Del">
+        <constructor-arg ref="i5" />
+    </bean>
+
+    <bean id="delwithi7" class="com.example.LaptopDealer.Del">
+        <constructor-arg ref="i7" />
+    </bean>
+
+    <bean id="macbookwithi3" class="com.example.LaptopDealer.MacBook">
+        <constructor-arg ref="i3" />
+    </bean>
+
+    <bean id="macbookwithi5" class="com.example.LaptopDealer.MacBook">
+        <constructor-arg ref="i5" />
+    </bean>
+
+    <bean id="macbookwithi7" class="com.example.LaptopDealer.MacBook">
+        <constructor-arg ref="i7" />
+    </bean>
+
+    <bean id="windowlaptopwithi3" class="com.example.LaptopDealer.WindowLaptop">
+        <constructor-arg ref="i3" />
+    </bean>
+
+    <bean id="windowlaptopwithi5" class="com.example.LaptopDealer.WindowLaptop">
+        <constructor-arg ref="i5" />
+    </bean>
+
+    <bean id="windowlaptopwithi7" class="com.example.LaptopDealer.WindowLaptop">
+        <constructor-arg ref="i7" />
+    </bean>
+
+</beans>
