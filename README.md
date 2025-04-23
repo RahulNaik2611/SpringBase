@@ -17,11 +17,12 @@ Each folder in this repo will represent a **standalone Spring Boot mini-project*
 
 ## 📂 Projects So Far
 
-| Project Name         | Description                                                                 | Status     |
-|----------------------|-----------------------------------------------------------------------------|------------|
-| `spring-core-tax`    | Basic tax calculator using Spring Core with XML-based configuration         | ✅ Complete |
-| `Laptop Dealer    `  |Creating multiple combinations of laptops with processors using Spring beans | ✅ Complete |
-| `...coming soon...`  | More projects to be added as I progress                                     | 🚧 WIP      |
+| Project Name               | Description                                                              | Status     |
+|----------------------------|---------------------------------------------------------------------------|------------|
+| `spring-core-tax`          | Basic tax calculator using Spring Core with XML-based configuration       | ✅ Complete |
+| `laptop-dealer`            | Creating combinations of laptops and processors using Spring Beans        | ✅ Complete |
+| `social-media-console-app` | Console app for posting and viewing messages using Spring XML config      | ✅ Complete |
+| _...more coming soon..._   | More projects to be added as I progress                                   | 🚧 WIP      |
 
 ---
 
@@ -88,4 +89,38 @@ This project marks the beginning of my journey into the world of **Spring Framew
 - Injecting dependencies using the **Spring ApplicationContext**.
 - Applying these concepts in a real-world-like scenario: a **tax calculator**.
 
+### 2. 💻 Laptop Dealer (`spring-core-laptop-dealer`)
+A simulation of a laptop store that sells different laptops (Dell, MacBook, Windows) with various processors (i3, i5, i7), configured using **constructor injection** in Spring XML.
+
+**What I learned:**
+- Constructor-based dependency injection
+- Reusability through interfaces
+- Creating multiple combinations of laptops with processors using Spring beans
+
+**Features:**
+- Clean separation between brand and processor
+- Uses Spring container to assemble configurations
+
+---
+
+
+## 🆕 Project 3: Social Media Console App
+
+### 📱 Overview
+
+A simple **console-based Social Media application** built using **Spring Framework (XML configuration)**.  
+This project demonstrates how to use interfaces, Spring beans, and Dependency Injection to simulate user-generated posts.
+
+### 🔧 Features
+
+- 👤 Set a username
+- 📝 Create new posts
+- 📋 View all posts
+
+### 🧠 Concepts Used
+
+- XML-based Spring Bean configuration
+- Manual Dependency Injection
+- Interfaces and their implementations
+- Spring ApplicationContext usage
 
