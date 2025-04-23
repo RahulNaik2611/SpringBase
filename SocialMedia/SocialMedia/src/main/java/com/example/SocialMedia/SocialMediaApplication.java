@@ -21,7 +21,7 @@ public class SocialMediaApplication {
 		{
 
 	
-		System.out.println("choose from below \n1 . create a post \n2.see All the post ");
+		System.out.println("choose from below \n1 . create a post \n2.see All the post\n3. Exit ");
 
 		int userselect = sc.nextInt();
 
@@ -41,6 +41,9 @@ public class SocialMediaApplication {
 			{
 				postlist.getAllPost().forEach(item -> System.out.println(item.getMessage()));
 				break;
+			}
+			case 3: {
+				applicationcontext.close()
 			}
 		
 			default:
