@@ -6,6 +6,14 @@ public class SimpleUser implements User
     private String userName;
     private PostList postList;
 
+    public void init(){
+        System.out.println("DB Connection success");
+    }
+
+    public void destroy(){
+        System.out.println("Closed ALL the resources");
+    }
+
     @Override
     public String getUserName() {
         return userName;
