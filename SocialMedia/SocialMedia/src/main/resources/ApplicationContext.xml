@@ -11,7 +11,7 @@
 
     <bean id="postList" class="com.example.SocialMedia.SimplePostList" scope="singleton"/>
 
-    <bean id="user" class="com.example.SocialMedia.SimpleUser">
+    <bean id="user" class="com.example.SocialMedia.SimpleUser" init-method="init destroy-method="destroy">
         <property name="postList" ref="postList"/>
     </bean>
 
