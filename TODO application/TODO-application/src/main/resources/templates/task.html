@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!-- Form to Add or Update TODO -->
+<form th:action="@{/addtodo}" th:object="${todo}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <input type="text" th:field="*{taskContent}" placeholder="Write your task" required>
+    <button type="submit" th:text="${todo.id != 0} ? 'Update' : 'Add TODO'"></button>
+</form>
+
+<!-- Display All TODOs -->
+<div class="todo-list">
+    <h2>Your Tasks</h2>
+
+    <div th:if="${listtodo.isEmpty()}">
+        <p>No tasks yet. Add your first one!</p>
+    </div>
+
+    <div th:each="todoItem : ${listtodo}" class="todo-item">
+        <!-- Checkbox Form to Update Status -->
+        <form th:action="@{/updatestatus}" method="post" style="display:inline-block">
+            <input type="hidden" name="id" th:value="${todoItem.id}" />
+            <input type="checkbox" name="completionStatus"
+                   th:checked="${todoItem.completionStatus}"
+                   onchange="this.form.submit()" />
+            <span th:text="${todoItem.taskContent}"
+                  th:classappend="${todoItem.completionStatus} ? 'completed' : ''">Sample Task</span>
+        </form>
+
+        <!-- Edit/Delete Buttons -->
+        <div style="display:inline-block; margin-left: 15px;">
+            <a th:href="@{'/edit/' + ${todoItem.id}}">Edit</a> |
+            <a th:href="@{'/delete/' + ${todoItem.id}}"
+               onclick="return confirm('Are you sure you want to delete this task?')">Delete</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
